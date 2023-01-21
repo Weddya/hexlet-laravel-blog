@@ -11,6 +11,16 @@
 <div class="container mt-4">
     <h1>О блоге</h1>
     <p>Эксперименты с Ларавелем на Хекслете</p>
+    @foreach ($team as $member)
+        @if ($loop->first)
+            Our team:
+            <ul>
+        @endif
+        <li>{{ $member['name'] }} ({{ $member['position'] }})</li>
+        @if ($loop->last)
+            </ul>
+        @endif
+    @endforeach
 </div>
 </body>
 </html>
