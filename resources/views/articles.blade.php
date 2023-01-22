@@ -7,5 +7,10 @@
 @endsection
 
 @section('content')
-    <p>Тут будут статьи</p>
+    <h1>Articles:</h1>
+    @foreach ($articles as $article)
+        <h3>{{ $article->name }}</h3>
+        <p>{{ $article->body }}</p>
+        <br>
+    @endforeach
 @endsection
