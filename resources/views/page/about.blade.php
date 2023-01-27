@@ -3,7 +3,7 @@
 @section('title', 'О блоге')
 
 @section('header')
-    <h1>О блоге</h1>
+    О блоге
 @endsection
 
 @section('content')

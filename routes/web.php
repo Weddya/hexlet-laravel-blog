@@ -14,10 +14,10 @@ use \App\Http\Controllers;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [Controllers\PageController::class, 'index'])->name('index');
 
-Route::get('about', [Controllers\PageController::class, 'about']);
+Route::get('about', [Controllers\PageController::class, 'about'])->name('about');
 
 Route::get('articles', [Controllers\ArticleController::class, 'index'])->name('articles.index');
+
+Route::get('articles/{id}', [Controllers\ArticleController::class, 'show'])->name('articles.show');
