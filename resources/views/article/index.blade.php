@@ -7,10 +7,10 @@
 @endsection
 
 @section('content')
-    <h1>Articles:</h1>
+    <h1>Список статей</h1>
     @foreach ($articles as $article)
-        <h3>{{ $article->name }}</h3>
-        <p>{{ $article->body }}</p>
-        <br>
+        <h2>{{$article->name}}</h2>
+        <div>{{Str::limit($article->body, 50)}}</div>
     @endforeach
+    {{ $articles->links() }}
 @endsection

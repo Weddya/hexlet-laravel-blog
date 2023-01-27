@@ -11,7 +11,7 @@
 <div class="container mt-4">
     <a href="/">Home</a>
     <a href="/about">About</a>
-    <a href="/articles">Articles</a>
+    <a href="{{ route('articles.index') }}">Articles</a>
     <h1>@yield('header')</h1>
     <div>
         @yield('content')
