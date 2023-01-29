@@ -20,4 +20,8 @@ Route::get('about', [Controllers\PageController::class, 'about'])->name('about')
 
 Route::get('articles', [Controllers\ArticleController::class, 'index'])->name('articles.index');
 
+Route::get('articles/create', [Controllers\ArticleController::class, 'create'])->name('articles.create');
+
+Route::post('articles', [Controllers\ArticleController::class, 'store'])->name('articles.store');
+
 Route::get('articles/{id}', [Controllers\ArticleController::class, 'show'])->name('articles.show');
